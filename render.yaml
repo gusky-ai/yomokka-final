@@ -10,8 +10,9 @@ services:
       - key: GOOGLE_API_KEY
         sync: false
 
-  - type: static
+  - type: web
     name: yomokka-frontend
+    env: static
     rootDir: frontend
     buildCommand: "npm install && npm run build"
     staticPublishPath: "dist"
